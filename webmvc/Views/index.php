@@ -54,7 +54,7 @@
                 <th>Tên sản phẩm</th>
                 <th>Mã nhà sản xuất</th>
                 <th>Hình ảnh</th>
-                <th><a href="">Thêm</a></th>
+                <th><a href="./index_create">Thêm</a></th>
             </tr>
             <?php foreach ($prds as $prd) {
             ?>
@@ -64,8 +64,8 @@
                     <td><?=$prd->ma_nhasx?></td>
                     <td><?=$prd->hinhanh?></td>
                     <td>
-                        <a href="">Sửa</a>
-                        <a href="">Xóa</a>
+                        <a href="#">Sửa</a>
+                        <a href="#">Xóa</a>
                     </td>
                 </tr>
             <?php } ?>

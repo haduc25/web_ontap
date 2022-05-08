@@ -35,6 +35,40 @@
         $rs = $stmt ->fetchAll(PDO::FETCH_CLASS, get_class($model));
         return $rs;
     }
+
+    //insert
+    public function insert(){
+        // var_dump($this->tName); exit();
+        $this->queryBuilder = "insert into $this->tName (";
+        // var_dump($this->tName); exit;
+        foreach ($this->columns as $col) {
+            if($this->{$col} == null){
+                continue;
+            }
+            $this->queryBuilder .= "$col, ";
+        }
+        $this->queryBuilder = rtrim($this->queryBuilder, ", ");
+        $this->queryBuilder .= ") values ( ";
+        foreach ($this->columns as $col) {
+            if($this->{$col} == null){
+                continue;
+            }
+            $this->queryBuilder .= "'" . $this->{$col} ."', ";
+        }
+        $this->queryBuilder = rtrim($this->queryBuilder, ", ");
+        $this->queryBuilder .= ")";
+
+        // var_dump($this->queryBuilder); exit;
+        $stmt = $this->conn->prepare($this->queryBuilder);
+        try{
+
+            $stmt->execute();
+            $this->id = $this->conn->lastInsertId();
+            return $this;
+        }catch(Exception $ex){
+            var_dump($ex->getMessage());die;
+        }
+    }
     
  }
 

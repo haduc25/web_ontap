@@ -16,6 +16,11 @@
             $ctl = new ProductController();
             $ctl->index();
             break;    
+        
+        case 'insert':
+            $ctl = new ProductController();
+            $ctl->insert();
+            break;    
 
         default: 
             echo 'Oét Ô Oét => Pages Not Found 404 !';

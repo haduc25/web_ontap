@@ -24,12 +24,12 @@
             <fieldset>
                 <legend>Thông tin sản phẩm</legend>
                 <label for="">Tên sản phẩm</label>
-                <input type="text">
+                <input type="text" name="tensp">
 
                 <br>
                 <br>
                 <label for="">Nhà sản xuất</label>
-                <select name="filter">
+                <select name="nhasx">
                     <option value="Apple">Apple</option>
                     <option value="Dareu">Dareu</option>
                     <option value="Logitech">Logitech</option>

@@ -19,7 +19,7 @@
         $rs = $stmt ->fetchAll(PDO::FETCH_CLASS, get_class($model));
         return $rs;
     }
-
+    
  }
 
 

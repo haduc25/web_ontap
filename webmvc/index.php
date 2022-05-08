@@ -12,7 +12,7 @@
             break;
 
         default: 
-            echo 'sos';
+            echo 'Oét Ô Oét => Pages Not Found 404 !';
     }
 
     

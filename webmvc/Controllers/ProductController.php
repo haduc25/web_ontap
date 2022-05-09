@@ -7,6 +7,8 @@ class ProductController
         require_once 'Views/create.php';
     }
 
+
+    //insert
     public function insert()
     {
         // var_dump($_POST['nhasx']); exit;
@@ -77,6 +79,40 @@ class ProductController
             </script>
         <?php
     }
+
+
+    //del
+    public function delele()
+    {
+        // echo 'use wanna delete';
+        if(isset($_GET['id']) && !empty($_GET['id']))
+        {
+            // echo 'do u sure wanna to delete?';
+            ?>
+                <script language="javascript">
+                    var txt;
+                    if(confirm("Bạn có chắc chắn muốn xóa?")){
+                        txt = 'deleted';
+                    }
+                    else{
+                        txt = 'cancel';
+                    }
+                    console.log(txt);
+                // window.location = '../login';
+                </script>
+            <?php
+        }
+    }
+
+
+
+
+
+
+
+
+
+
 }
 
 ?>

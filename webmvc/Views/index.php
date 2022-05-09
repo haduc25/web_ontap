@@ -70,7 +70,7 @@
                     <td><img src="./<?=$prd->hinhanh?>" alt="<?=$prd->ten_sp?>" width=100></td>
                     <td>
                         <a href="#">Sửa</a>
-                        <a href="#">Xóa</a>
+                        <a href="del?id=<?=$prd->ma_sp?>">Xóa</a>
                     </td>
                 </tr>
             <?php $stt++; } ?>

@@ -22,6 +22,11 @@
             $ctl->insert();
             break;    
 
+        case 'del':
+            $ctl = new ProductController();
+            $ctl->delele();
+            break;    
+
         default: 
             echo 'Oét Ô Oét => Pages Not Found 404 !';
     }

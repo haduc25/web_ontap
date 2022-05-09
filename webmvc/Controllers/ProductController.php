@@ -125,6 +125,69 @@ class ProductController
         //         require_once 'Views/edit.php';   
         //     }
         // }
+
+
+
+        $_masp = $_GET['id'];
+        $_tensp = $_POST['tensp'];
+        $_nhasx = $_POST['nhasx'];
+        $_hinhanh = $_FILES['hinhanh'];
+        $fileName = $_hinhanh['name'];
+        $fileName = null;
+
+        //var_dump($_FILES['hinhanh']);
+
+        switch($_nhasx)
+        {
+            case 'Logitech':
+                $_nhasx = 1;
+                break;
+            case 'Dareu':
+                $_nhasx = 2;
+                break;
+            case 'Apple':
+                $_nhasx = 3;
+                break;
+            case 'Samsung':
+                $_nhasx = 4;
+                break;
+            default:
+                $_nhasx = 0;
+                echo "Nhà sx này chưa có trong csdl, vui lòng thêm !";
+                exit();
+        }
+
+        //update
+        if($_hinhanh['size'] > 0)
+        {
+            //neu co img update
+            $fileName = 'uploads/'.time()."-".$_hinhanh['name'];
+        }
+
+        if(move_uploaded_file($_hinhanh['tmp_name'], $fileName)){
+        }else
+        { $fileName = null;}
+
+
+        $prds = new Products();
+        $prds->getAll2();
+
+        // var_dump($temp[0]->ten_nhasx); exit;
+        // var_dump($_POST['nhasx']); exit;
+
+
+        $prds->ma_sp = $_masp;
+        $prds->ten_sp = $_tensp;
+        if($_nhasx != 0 && is_int($_nhasx))
+            $prds->ma_nhasx = $_nhasx;
+        $prds->hinhanh = $fileName;
+
+        $prds->update($_masp);
+        ?>
+            <script language="javascript">alert("Đã cập nhập thành công!");
+            window.location = './';
+            </script>
+        <?php
     }
 
 

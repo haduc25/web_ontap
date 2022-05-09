@@ -135,13 +135,38 @@
             return null;  
         }
     }
+
+    //edit
+    function update($id){
+        $this->queryBuilder = "update $this->tName set ";
+        // var_dump($id); exit;
+        foreach ($this->columns as $col) {
+            if($this->{$col} == null){
+                continue;
+            }
+            $this->queryBuilder .= " $col = '" . $this->{$col} . "', ";
+        }
+
+        $this->queryBuilder = rtrim($this->queryBuilder, ", ");
+        $_id = $this->columns[0]; //save id from csdl
+
+        // var_dump($this->queryBuilder); exit;
+        // var_dump($this->columns); exit;
+        // var_dump($_id); exit;
+
+        $this->queryBuilder .= " where $_id = $id";
+
         
-
-
-
+        $stmt = $this->conn->prepare($this->queryBuilder);
+        // var_dump($stmt);die;
+        try{
+            $stmt->execute();
+            return $this;
+        }catch(Exception $ex){
+            var_dump($ex->getMessage());
+            die;
+        }
+    }
     
  }
-
-
-
 ?>

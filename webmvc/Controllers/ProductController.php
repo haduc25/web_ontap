@@ -84,36 +84,16 @@ class ProductController
     //del
     public function delele()
     {
-        // $prds = new Products();
-		// $prds->delete($_GET['id']);
-
-        // echo 'use wanna delete';
-        if(isset($_GET['id']) && !empty($_GET['id']))
+        if (isset($_GET['id']) && !empty($_GET['id'])) 
         {
-            // echo 'do u sure wanna to delete?';
-            ?>
-                <script language="javascript">
-                    // var txt;
-                    if(confirm("Bạn có chắc chắn muốn xóa?")){
-                        // txt = 'deleted';
-                        <?php /*$prds = Products::delete($_GET['id']);*/ 
-                            $prds = new Products();
-                            $prds->delete($_GET['id']);
-                        ?>
-                        alert("Đã xóa thành công!");
-                    }
-                    else{
-                        // txt = 'cancel';
-                    }
-                    // console.log(txt);
-                    window.location = './';
-                // window.location = '../login';
+            $prds = new Products();
+			$prds->delete($_GET['id']);?>
+                <script language="javascript">alert("Đã xóa thành công!");
+                window.location = './';
                 </script>
             <?php
         }
     }
-
-
 
 
 

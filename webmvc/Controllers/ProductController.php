@@ -9,6 +9,7 @@ class ProductController
 
     public function insert()
     {
+        // var_dump($_POST['nhasx']); exit;
         $_tensp = $_POST['tensp'];
         $_nhasp = $_POST['nhasx'];
         $_hinhanh = $_FILES['hinhanh'];
@@ -17,6 +18,10 @@ class ProductController
 
         $fileName = $_hinhanh['name'];
         $prds = new Products();
+
+        $temp = $prds->getAll2();
+        var_dump($temp[0]->ten_nhasx); exit;
+
 
         $prds->ma_sp = null;
         $prds->ten_sp = $_tensp;
@@ -40,10 +45,11 @@ class ProductController
         $prds->insert();
 
 
-
-
-
-
+        ?>
+            <script language="javascript">alert("Đã thêm thành công!");
+            window.location = './';
+            </script>
+        <?php
     }
 }
 

@@ -69,6 +69,34 @@
             var_dump($ex->getMessage());die;
         }
     }
+
+
+    //delete
+    public function delete($id){
+        // var_dump($id); exit();
+        // var_dump($this->tName); exit();
+        // var_dump($this->columns[0]); exit();
+
+        $_id = $this->columns[0]; //save id from csdl
+        // var_dump($_id); exit;
+
+        // $this->queryBuilder = "delete from $this->tName where id_sp = $id";
+        $this->queryBuilder = "delete from $this->tName where $_id = $id";
+        // var_dump($this->queryBuilder); exit();
+
+        $stmt = $this->conn->prepare($this->queryBuilder);
+        try{
+
+            $stmt->execute();
+            return true;
+        }catch(Exception $ex){
+            var_dump($ex->getMessage());die;
+        }
+    }
+
+
+
+
     
  }
 

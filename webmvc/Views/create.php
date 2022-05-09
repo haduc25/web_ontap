@@ -41,6 +41,8 @@
                 <label for="">Hình ảnh</label>
                 <input type="file" name="hinhanh">
 
+                <br>
+                <br>
                 <input type="submit" value="Thêm">
                 <input type=button onClick="location.href='./'" value='Quay lại'>
             </fieldset>

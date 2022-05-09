@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trang chủ - Danh sách sản phẩm</title>
     <style>
-        h1
+        h1, h2
         {
             text-align: center;
-            color: red;
+            /* color: red; */
         }
 
         table
@@ -62,7 +62,7 @@
                     <td><?=$prd->ma_sp?></td>
                     <td><?=$prd->ten_sp?></td>
                     <td><?=$prd->ten_nhasx?></td>
-                    <td><?=$prd->hinhanh?></td>
+                    <td><img src="./<?=$prd->hinhanh?>" alt="<?=$prd->ten_sp?>" width=100></td>
                     <td>
                         <a href="#">Sửa</a>
                         <a href="#">Xóa</a>

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trang chủ - Danh sách sản phẩm</title>
     <style>
-        h1, h2
+        h2
         {
             text-align: center;
             /* color: red; */
@@ -23,6 +23,11 @@
         {
             border: 1px solid #000;
             padding: 3px;
+        }
+
+        td
+        {
+            height: 50px;
         }
 
         a
@@ -50,16 +55,16 @@
         <h2>Danh sách sản phẩm</h2>
         <table>
             <tr>
-                <th>Mã sản phẩm</th>
+                <th>STT</th>
                 <th>Tên sản phẩm</th>
                 <th>Tên nhà sản xuất</th>
                 <th>Hình ảnh</th>
                 <th><a href="./index_create">Thêm</a></th>
             </tr>
-            <?php foreach ($prds as $prd) {
-            ?>
+            <?php $stt = 1;
+            foreach ($prds as $prd) {?>
                 <tr>
-                    <td><?=$prd->ma_sp?></td>
+                    <td><?=$stt?></td>
                     <td><?=$prd->ten_sp?></td>
                     <td><?=$prd->ten_nhasx?></td>
                     <td><img src="./<?=$prd->hinhanh?>" alt="<?=$prd->ten_sp?>" width=100></td>
@@ -68,7 +73,7 @@
                         <a href="#">Xóa</a>
                     </td>
                 </tr>
-            <?php } ?>
+            <?php $stt++; } ?>
         </table>
 
 </body>

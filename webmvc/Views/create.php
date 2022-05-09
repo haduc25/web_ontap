@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thêm sản phẩm</title>
     <style>
-        h1
+        h2
         {
             text-align: center;
         }
@@ -19,7 +19,7 @@
 </head>
 <body>
     <div>
-        <h1>Thêm sản phẩm</h1>
+        <h2>Thêm sản phẩm</h2>
         <form action="insert" method="POST" enctype="multipart/form-data">
             <fieldset>
                 <legend>Thông tin sản phẩm</legend>

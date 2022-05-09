@@ -94,6 +94,48 @@
         }
     }
 
+    //find 
+    public static function find($id){
+        // var_dump($id); exit;
+        // echo $id; die;
+        $model = new static();
+        $_id = $model->columns[0]; //save id from csdl
+
+        $sql = "select * from $model->tName where $_id = $id";
+        // var_dump($sql); exit;
+        $stmt = $model->conn->prepare($sql);
+        $stmt->execute();
+        $result = $stmt->fetchAll(PDO::FETCH_CLASS, get_class($model));
+        // var_dump($result[0]); die;
+
+        if (count($result) > 0) {
+            return $result[0];
+        } else {
+            return null;  
+        }
+    }
+
+    //find 
+    public static function find2($id){
+        // var_dump($id); exit;
+        // echo $id; die;
+        $model = new static();
+        $_id = $model->columns2[0]; //save id from csdl
+
+        $sql = "select * from $model->tName2 where $_id = $id";
+        // var_dump($sql); exit;
+        $stmt = $model->conn->prepare($sql);
+        $stmt->execute();
+        $result = $stmt->fetchAll(PDO::FETCH_CLASS, get_class($model));
+        // var_dump($result[0]); die;
+
+        if (count($result) > 0) {
+            return $result[0];
+        } else {
+            return null;  
+        }
+    }
+        
 
 
 

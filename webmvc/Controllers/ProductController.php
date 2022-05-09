@@ -2,7 +2,7 @@
 
 class ProductController
 {
-    public function index()
+    public function index_create()
     {
         require_once 'Views/create.php';
     }
@@ -93,6 +93,38 @@ class ProductController
                 </script>
             <?php
         }
+    }
+
+
+    //edit
+    public function index_edit()
+    {
+        if (isset($_GET['id']) && !empty($_GET['id'])) 
+        {
+            $prds = new Products();
+            // var_dump($prds->find($_GET['id'])); exit;
+            // var_dump($prds->find2($_GET['id'])); exit;
+            if(($value = $prds->find($_GET['id'])) != NULL)
+            {
+                // var_dump($value->ma_nhasx); // lay ra id cua nha sx
+                $value2 = $prds->find2($value->ma_nhasx);
+                // var_dump($value2->ten_nhasx); exit; //lay ten nhasx
+                require_once 'Views/edit.php';
+            }
+        }
+    }
+
+    public function edit()
+    {
+        // if (isset($_GET['id']) && !empty($_GET['id'])) 
+        // {
+        //     $prds = new Products();
+        //     // var_dump($prds->find($_GET['id'])); exit;
+        //     if(($value = $prds->find($_GET['id'])) != NULL)
+        //     {
+        //         require_once 'Views/edit.php';   
+        //     }
+        // }
     }
 
 

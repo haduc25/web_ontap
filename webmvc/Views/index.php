@@ -67,9 +67,14 @@
                     <td><?=$stt?></td>
                     <td><?=$prd->ten_sp?></td>
                     <td><?=$prd->ten_nhasx?></td>
-                    <td><img src="./<?=$prd->hinhanh?>" alt="<?=$prd->ten_sp?>" width=100></td>
                     <td>
-                        <a href="#">Sửa</a>
+                        <?php 
+                            if($prd->hinhanh){?>
+                                <img src="./<?=$prd->hinhanh?>" alt="<?=$prd->ten_sp?>" width=100>
+                        <?php } ?>
+                    </td>
+                    <td>
+                        <a href="index_edit?id=<?=$prd->ma_sp?>">Sửa</a>
                         <a href="del?id=<?=$prd->ma_sp?>">Xóa</a>
                     </td>
                 </tr>

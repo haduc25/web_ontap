@@ -12,9 +12,10 @@
             $ctl->index();
             break;
         
+        //insert
         case 'index_create':
             $ctl = new ProductController();
-            $ctl->index();
+            $ctl->index_create();
             break;    
         
         case 'insert':
@@ -22,9 +23,21 @@
             $ctl->insert();
             break;    
 
+        //delete
         case 'del':
             $ctl = new ProductController();
             $ctl->delele();
+            break;  
+
+        //edit
+        case 'index_edit':
+            $ctl = new ProductController();
+            $ctl->index_edit();
+            break;    
+
+        case 'edit':
+            $ctl = new ProductController();
+            $ctl->edit();
             break;    
 
         default: 

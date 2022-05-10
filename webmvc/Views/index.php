@@ -27,7 +27,7 @@
 
         td
         {
-            height: 50px;
+            height: 80px;
         }
 
         a
@@ -59,6 +59,7 @@
                 <th>Tên sản phẩm</th>
                 <th>Tên nhà sản xuất</th>
                 <th>Hình ảnh</th>
+                <th>Ngày sản xuất</th>
                 <th><a href="./index_create">Thêm</a></th>
             </tr>
             <?php $stt = 1;
@@ -73,6 +74,7 @@
                                 <img src="./<?=$prd->hinhanh?>" alt="<?=$prd->ten_sp?>" width=100>
                         <?php } ?>
                     </td>
+                    <td><?=$prd->ngaysanxuat?></td>
                     <td>
                         <a href="index_edit?id=<?=$prd->ma_sp?>">Sửa</a>
                         <a href="del?id=<?=$prd->ma_sp?>">Xóa</a>

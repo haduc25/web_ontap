@@ -15,6 +15,11 @@ class ProductController
         $_tensp = $_POST['tensp'];
         $_nhasx = $_POST['nhasx'];
         $_hinhanh = $_FILES['hinhanh'];
+        $_day = $_POST['day'];
+        $_month = $_POST['month'];
+        $_year = $_POST['year'];
+        $_date = $_day."/".$_month."/".$_year;
+        // var_dump($_date); exit;
         //var_dump($_FILES['hinhanh']);
 
         switch($_nhasx)
@@ -70,6 +75,7 @@ class ProductController
 		}
 
         $prds->hinhanh = $fileName;
+        $prds->ngaysanxuat = $_date;
         $prds->insert();
 
 

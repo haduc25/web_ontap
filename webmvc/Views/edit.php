@@ -78,6 +78,20 @@
 
                 <br>
                 <br>
+                <label for="">Khuyến mại</label>
+                <br>
+                <input type="radio" name="khuyenmai" value="10%" <?php if(strpos($value->khuyenmai, "10%") !== false ){?> checked <?php } ?>>10%
+                <input type="radio" name="khuyenmai" value="20%" <?php if(strpos($value->khuyenmai, "20%") !== false ){?> checked <?php } ?>> 20%
+                <input type="radio" name="khuyenmai" value="Bảo hành 1 năm" <?php if(strpos($value->khuyenmai, "Bảo hành 1 năm") !== false ){?> checked <?php } ?>> Bảo hành 1 năm
+
+                <br>
+                <br>
+                <label for="">Thông tin thêm</label>
+                <br>
+                <textarea name="thongtinthem" rows="4" cols="50" placeholder="Viết gì đó ở đây :>"><?=$value->thongtinthem?></textarea>
+                
+                <br>
+                <br>
                 <label for="">Hình ảnh</label>
                 <?php
                     if($value->hinhanh)

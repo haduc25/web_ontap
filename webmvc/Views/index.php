@@ -63,6 +63,7 @@
                 <th>Số lượng</th>
                 <th>Đơn giá</th>
                 <th>Thành tiền</th>
+                <th>Màu sắc</th>
                 <th><a href="./index_create">Thêm</a></th>
             </tr>
             <?php $stt = 1; $money = 0;
@@ -81,6 +82,7 @@
                     <td><?=$prd->soluong?></td>
                     <td><?=number_format($prd->dongia)?></td>
                     <td><?=number_format($money = ($prd->dongia * $prd->soluong))?></td>
+                    <td><?=$prd->mausac?></td>
                     <td>
                         <a href="index_edit?id=<?=$prd->ma_sp?>">Sửa</a>
                         <a href="del?id=<?=$prd->ma_sp?>">Xóa</a>

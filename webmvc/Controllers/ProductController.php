@@ -23,29 +23,12 @@ class ProductController
         $_dongia = $_POST['dongia'];
         $_soluong = $_POST['soluong'];
         //mau sac
-        // $_mausac = $_POST['cb1'];
-        // $white = "";
-        // $black = "";
-        // $yellow = "";
-        // $red = "";
-        // $lightblue = "";
-
-        // if($_POST['cb1'] != NULL)
-        //     $white = $_POST['cb1'];
         $colors = $_POST['mausac'];
-        // $_mausac = [];
         foreach ($colors as $color) 
         {
-            // echo $color . "<br>";
-            $_mausac[] = $color; 
+            $_arrColor[] = $color; 
         }
-        echo implode(", ", $_mausac); //convert array to string
-        // var_dump($_mausac);
-        
-
-        exit;
-
-
+        $_mausac = implode(", ", $_arrColor); //convert array to string
 
         if(intval($_day) < 10)
         {
@@ -121,6 +104,7 @@ class ProductController
         $prds->ngaysanxuat = $_date;
         $prds->dongia = $_dongia;
         $prds->soluong = $_soluong;
+        $prds->mausac = $_mausac;
         $prds->insert();
 
 

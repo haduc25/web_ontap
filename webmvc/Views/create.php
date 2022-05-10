@@ -69,6 +69,8 @@
                 <label for="vehicle2"> Vàng</label>
                 <input type="checkbox" name="mausac[]" value="Đỏ">
                 <label for="vehicle2"> Đỏ</label>
+                <input type="checkbox" name="mausac[]" value="Tím">
+                <label for="vehicle2"> Tím</label>
                 <input type="checkbox" name="mausac[]" value="Xanh dương">
                 <label for="vehicle2"> Xanh dương</label>
 

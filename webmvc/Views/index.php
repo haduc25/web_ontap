@@ -60,9 +60,12 @@
                 <th>Tên nhà sản xuất</th>
                 <th>Hình ảnh</th>
                 <th>Ngày sản xuất</th>
+                <th>Số lượng</th>
+                <th>Đơn giá</th>
+                <th>Thành tiền</th>
                 <th><a href="./index_create">Thêm</a></th>
             </tr>
-            <?php $stt = 1;
+            <?php $stt = 1; $money = 0;
             foreach ($prds as $prd) {?>
                 <tr>
                     <td><?=$stt?></td>
@@ -75,6 +78,9 @@
                         <?php } ?>
                     </td>
                     <td><?=$prd->ngaysanxuat?></td>
+                    <td><?=$prd->soluong?></td>
+                    <td><?=number_format($prd->dongia)?></td>
+                    <td><?=number_format($money = ($prd->dongia * $prd->soluong))?></td>
                     <td>
                         <a href="index_edit?id=<?=$prd->ma_sp?>">Sửa</a>
                         <a href="del?id=<?=$prd->ma_sp?>">Xóa</a>

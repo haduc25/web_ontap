@@ -52,6 +52,15 @@
 
                 <br>
                 <br>
+                <label for="">Đơn giá</label>
+                <input type="number" name="dongia" value="<?=$value->dongia?>" min="1000" step="500"> VNĐ
+                <br>
+                <br>
+                <label for="">Số lượng</label>
+                <input type="number" name="soluong" value="<?=$value->soluong?>" min="1">
+
+                <br>
+                <br>
                 <label for="">Hình ảnh</label>
                 <?php
                     if($value->hinhanh)

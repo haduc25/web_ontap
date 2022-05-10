@@ -51,11 +51,11 @@
                 <br>
                 <br>
                 <label for="">Đơn giá</label>
-                <input type="number" name="day" value="1000" min="1000">VNĐ
+                <input type="number" name="dongia" value="1000" min="1000" step="500"> VNĐ
                 <br>
                 <br>
                 <label for="">Số lượng</label>
-                <input type="number" name="month" value="0" min="1">
+                <input type="number" name="soluong" value="0" min="1">
 
                 <br>
                 <br>

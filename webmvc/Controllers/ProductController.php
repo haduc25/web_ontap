@@ -15,9 +15,16 @@ class ProductController
         $_tensp = $_POST['tensp'];
         $_nhasx = $_POST['nhasx'];
         $_hinhanh = $_FILES['hinhanh'];
+        //date
         $_day = $_POST['day'];
         $_month = $_POST['month'];
         $_year = $_POST['year'];
+        //dongia, soluong
+        $_dongia = $_POST['dongia'];
+        $_soluong = $_POST['soluong'];
+        // var_dump($_soluong); exit;
+
+
 
         if(intval($_day) < 10)
         {
@@ -91,6 +98,8 @@ class ProductController
 
         $prds->hinhanh = $fileName;
         $prds->ngaysanxuat = $_date;
+        $prds->dongia = $_dongia;
+        $prds->soluong = $_soluong;
         $prds->insert();
 
 
@@ -159,6 +168,9 @@ class ProductController
         $_day = $_POST['day'];
         $_month = $_POST['month'];
         $_year = $_POST['year'];
+        //dongia, soluong
+        $_dongia = $_POST['dongia'];
+        $_soluong = $_POST['soluong'];
         
         if(intval($_day) < 10)
         {
@@ -223,6 +235,8 @@ class ProductController
             $prds->ma_nhasx = $_nhasx;
         $prds->hinhanh = $fileName;
         $prds->ngaysanxuat = $_date;
+        $prds->dongia = $_dongia;
+        $prds->soluong = $_soluong;
 
         $prds->update($_masp);
         ?>

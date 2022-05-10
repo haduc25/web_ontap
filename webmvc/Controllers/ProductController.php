@@ -20,9 +20,16 @@ class ProductController
         $_year = $_POST['year'];
 
         if(intval($_day) < 10)
+        {
+            $_day = str_replace('0', '', $_day);
             $_day = '0'.$_day;
+        }
+
         if(intval($_month) < 10)
+        {
+            $_month = str_replace('0', '', $_month);
             $_month = '0'.$_month;
+        }
 
         $_date = $_day."/".$_month."/".$_year;
 

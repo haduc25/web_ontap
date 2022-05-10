@@ -50,6 +50,15 @@
 
                 <br>
                 <br>
+                <label for="">Đơn giá</label>
+                <input type="number" name="day" value="1000" min="1000">VNĐ
+                <br>
+                <br>
+                <label for="">Số lượng</label>
+                <input type="number" name="month" value="0" min="1">
+
+                <br>
+                <br>
                 <label for="">Hình ảnh</label>
                 <input type="file" name="hinhanh">
 

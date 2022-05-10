@@ -144,6 +144,8 @@ class ProductController
                 // var_dump($value); exit;
                 // var_dump($value->ma_nhasx); // lay ra id cua nha sx
                 $value2 = $prds->find2($value->ma_nhasx);
+                
+                // var_dump($value->mausac); exit;
                 // var_dump($value2->ten_nhasx); exit; //lay ten nhasx
                 require_once 'Views/edit.php';
             }

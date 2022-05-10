@@ -61,6 +61,23 @@
 
                 <br>
                 <br>
+                <label for="">Màu sắc</label>
+                <br>
+                <input type="checkbox" name="mausac[]" value="Trắng" <?php if(strpos($value->mausac, "Trắng") !== false ){?> checked <?php } ?>>
+                <label for="vehicle1"> Trắng</label>
+                <input type="checkbox" name="mausac[]" value="Đen" <?php if(strpos($value->mausac, "Đen") !== false ){?> checked <?php } ?>>
+                <label for="vehicle2"> Đen</label>
+                <input type="checkbox" name="mausac[]" value="Vàng" <?php if(strpos($value->mausac, "Vàng") !== false ){?> checked <?php } ?>>
+                <label for="vehicle2"> Vàng</label>
+                <input type="checkbox" name="mausac[]" value="Đỏ" <?php if(strpos($value->mausac, "Đỏ") !== false ){?> checked <?php } ?>>
+                <label for="vehicle2"> Đỏ</label>
+                <input type="checkbox" name="mausac[]" value="Tím" <?php if(strpos($value->mausac, "Tím") !== false ){?> checked <?php } ?>>
+                <label for="vehicle2"> Tím</label>
+                <input type="checkbox" name="mausac[]" value="Xanh dương" <?php if(strpos($value->mausac, "Xanh dương") !== false ){?> checked <?php } ?>>
+                <label for="vehicle2"> Xanh dương</label>
+
+                <br>
+                <br>
                 <label for="">Hình ảnh</label>
                 <?php
                     if($value->hinhanh)

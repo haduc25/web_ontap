@@ -24,11 +24,24 @@
 
         <!-- combobox - nhà sản xuất -->
         <select name="nhasx">
-                    <option value="Apple">Apple</option>
-                    <option value="Dareu">Dareu</option>
-                    <option value="Logitech">Logitech</option>
-                    <option value="Samsung">Samsung</option>
+                <option value="Apple">Apple</option>
+                <option value="Dareu">Dareu</option>
+                <option value="Logitech">Logitech</option>
+                <option value="Samsung">Samsung</option>
         </select>
+
+        <!-- Ngày sản xuất -->
+        <br>
+        <br>
+        <label for="">Ngày sản xuất</label>
+        <br>
+        <br>
+        <label for="">Ngày</label>
+        <input type="number" value="1" min="1" max="31" name="day">
+        <label for="">Tháng</label>
+        <input type="number" value="1" min="1" max="12" name="month">
+        <label for="">Năm</label>
+        <input type="number" value="2022" min="1800" max="3000" name="year">
 
         <br>
         <br>

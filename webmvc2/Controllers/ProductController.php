@@ -9,6 +9,14 @@ class ProductController
 
     public function insert()
     {
+       $_day = $_POST['day'];
+       $_month = $_POST['month'];
+       $_year = $_POST['year'];
+       $_date = $_day . '/' . $_month . '/' . $_year;
+    
+       echo $_date; exit;
+
+
        $_tensp = $_POST['tensp'];
        $_nhasx = $_POST['nhasx'];
        $_hinhanh = $_FILES['hinhanh'];

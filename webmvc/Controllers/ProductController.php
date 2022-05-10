@@ -30,6 +30,7 @@ class ProductController
         }
         $_mausac = implode(", ", $_arrColor); //convert array to string
 
+        //date
         if(intval($_day) < 10)
         {
             $_day = str_replace('0', '', $_day);
@@ -178,7 +179,15 @@ class ProductController
         //dongia, soluong
         $_dongia = $_POST['dongia'];
         $_soluong = $_POST['soluong'];
+        //mau sac
+        $colors = $_POST['mausac'];
+        foreach ($colors as $color) 
+        {
+            $_arrColor[] = $color; 
+        }
+        $_mausac = implode(", ", $_arrColor); //convert array to string
         
+        //date
         if(intval($_day) < 10)
         {
             $_day = str_replace('0', '', $_day);
@@ -244,6 +253,8 @@ class ProductController
         $prds->ngaysanxuat = $_date;
         $prds->dongia = $_dongia;
         $prds->soluong = $_soluong;
+        $prds->mausac = $_mausac;
+        
 
         $prds->update($_masp);
         ?>

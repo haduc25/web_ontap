@@ -55,7 +55,22 @@
                 <br>
                 <br>
                 <label for="">Số lượng</label>
-                <input type="number" name="soluong" value="0" min="1">
+                <input type="number" name="soluong" value="1" min="1">
+
+                <br>
+                <br>
+                <label for="">Màu sắc</label>
+                <br>
+                <input type="checkbox" name="mausac[]" value="Trắng">
+                <label for="vehicle1"> Trắng</label>
+                <input type="checkbox" name="mausac[]" value="Đen">
+                <label for="vehicle2"> Đen</label>
+                <input type="checkbox" name="mausac[]" value="Vàng">
+                <label for="vehicle2"> Vàng</label>
+                <input type="checkbox" name="mausac[]" value="Đỏ">
+                <label for="vehicle2"> Đỏ</label>
+                <input type="checkbox" name="mausac[]" value="Xanh dương">
+                <label for="vehicle2"> Xanh dương</label>
 
                 <br>
                 <br>

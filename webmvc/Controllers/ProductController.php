@@ -22,7 +22,28 @@ class ProductController
         //dongia, soluong
         $_dongia = $_POST['dongia'];
         $_soluong = $_POST['soluong'];
-        // var_dump($_soluong); exit;
+        //mau sac
+        // $_mausac = $_POST['cb1'];
+        // $white = "";
+        // $black = "";
+        // $yellow = "";
+        // $red = "";
+        // $lightblue = "";
+
+        // if($_POST['cb1'] != NULL)
+        //     $white = $_POST['cb1'];
+        $colors = $_POST['mausac'];
+        // $_mausac = [];
+        foreach ($colors as $color) 
+        {
+            // echo $color . "<br>";
+            $_mausac[] = $color; 
+        }
+        echo implode(", ", $_mausac); //convert array to string
+        // var_dump($_mausac);
+        
+
+        exit;
 
 
 

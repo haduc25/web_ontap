@@ -62,17 +62,31 @@
                 <label for="">Màu sắc</label>
                 <br>
                 <input type="checkbox" name="mausac[]" value="Trắng">
-                <label for="vehicle1"> Trắng</label>
+                <label for=""> Trắng</label>
                 <input type="checkbox" name="mausac[]" value="Đen">
-                <label for="vehicle2"> Đen</label>
+                <label for=""> Đen</label>
                 <input type="checkbox" name="mausac[]" value="Vàng">
-                <label for="vehicle2"> Vàng</label>
+                <label for=""> Vàng</label>
                 <input type="checkbox" name="mausac[]" value="Đỏ">
-                <label for="vehicle2"> Đỏ</label>
+                <label for=""> Đỏ</label>
                 <input type="checkbox" name="mausac[]" value="Tím">
-                <label for="vehicle2"> Tím</label>
+                <label for=""> Tím</label>
                 <input type="checkbox" name="mausac[]" value="Xanh dương">
-                <label for="vehicle2"> Xanh dương</label>
+                <label for=""> Xanh dương</label>
+
+                <br>
+                <br>
+                <label for="">Khuyến mại</label>
+                <br>
+                <input type="radio" name="khuyenmai" value="10%"> 10%
+                <input type="radio" name="khuyenmai" value="20%"> 20%
+                <input type="radio" name="khuyenmai" value="Bảo hành 1 năm"> Bảo hành 1 năm
+
+                <br>
+                <br>
+                <label for="">Thông tin thêm</label>
+                <br>
+                <textarea name="thongtinthem" rows="4" cols="50" placeholder="Viết gì đó ở đây :>"></textarea>
 
                 <br>
                 <br>

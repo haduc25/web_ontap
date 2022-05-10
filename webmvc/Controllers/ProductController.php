@@ -23,13 +23,29 @@ class ProductController
         $_dongia = $_POST['dongia'];
         $_soluong = $_POST['soluong'];
         //mau sac
-        $colors = $_POST['mausac'];
-        foreach ($colors as $color) 
+        if(isset($_POST['mausac']))
         {
-            $_arrColor[] = $color; 
+            $colors = $_POST['mausac'];
+            foreach ($colors as $color) 
+            {
+                $_arrColor[] = $color; 
+            }
+            $_mausac = implode(", ", $_arrColor); //convert array to string
+        }else
+        {
+            $_mausac = null;
         }
-        $_mausac = implode(", ", $_arrColor); //convert array to string
 
+        //khuyenmai
+        // var_dump($_POST['khuyenmai']); exit;
+        if(isset($_POST['khuyenmai']))
+            $_khuyenmai = $_POST['khuyenmai'];
+        else
+            $_khuyenmai = null;
+
+        //thongtinthem
+        $_thongtinthem = $_POST['thongtinthem'];
+        
         //date
         if(intval($_day) < 10)
         {
@@ -106,6 +122,8 @@ class ProductController
         $prds->dongia = $_dongia;
         $prds->soluong = $_soluong;
         $prds->mausac = $_mausac;
+        $prds->khuyenmai = $_khuyenmai;
+        $prds->thongtinthem = $_thongtinthem;
         $prds->insert();
 
 

@@ -37,6 +37,18 @@
                     <option value="Logitech">Logitech</option>
                     <option value="Samsung">Samsung</option>
                 </select>
+                
+                <br>
+                <br>
+                <label for="">Ngày sản xuất</label>
+                <br>
+                <br>
+                <label for="">Ngày</label>
+                <input type="number" name="day" value="<?=substr($value->ngaysanxuat, 0, 2);?>" min="1" max="31">
+                <label for="">Tháng</label>
+                <input type="number" name="month" value="<?=substr($value->ngaysanxuat, 3, -5);?>" min="1" max="12">
+                <label for="">Năm</label>
+                <input type="number" name="year" value="<?=substr($value->ngaysanxuat, 6);?>" min="1500" max="3000">
 
                 <br>
                 <br>

@@ -18,7 +18,15 @@ class ProductController
         $_day = $_POST['day'];
         $_month = $_POST['month'];
         $_year = $_POST['year'];
+
+        if(intval($_day) < 10)
+            $_day = '0'.$_day;
+        if(intval($_month) < 10)
+            $_month = '0'.$_month;
+
         $_date = $_day."/".$_month."/".$_year;
+
+        // var_dump($_day); exit;
         // var_dump($_date); exit;
         //var_dump($_FILES['hinhanh']);
 
@@ -141,6 +149,25 @@ class ProductController
         $_hinhanh = $_FILES['hinhanh'];
         $fileName = $_hinhanh['name'];
         $fileName = null;
+        $_day = $_POST['day'];
+        $_month = $_POST['month'];
+        $_year = $_POST['year'];
+        
+        if(intval($_day) < 10)
+        {
+            $_day = str_replace('0', '', $_day);
+            $_day = '0'.$_day;
+        }
+
+        if(intval($_month) < 10)
+        {
+            $_month = str_replace('0', '', $_month);
+            $_month = '0'.$_month;
+        }
+
+        $_date = $_day."/".$_month."/".$_year;
+
+        // var_dump($_date); exit;
 
         //var_dump($_FILES['hinhanh']);
 
@@ -188,6 +215,7 @@ class ProductController
         if($_nhasx != 0 && is_int($_nhasx))
             $prds->ma_nhasx = $_nhasx;
         $prds->hinhanh = $fileName;
+        $prds->ngaysanxuat = $_date;
 
         $prds->update($_masp);
         ?>

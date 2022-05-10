@@ -44,7 +44,7 @@
                 <label for="">Ngày</label>
                 <input type="number" name="day" value="<?= date("d")?>" min="1" max="31">
                 <label for="">Tháng</label>
-                <input type="number" name="month" value="<?= date("m")?>" min="1" max="12">
+                <input type="number" name="month" value="<?= date("n")?>" min="1" max="12">
                 <label for="">Năm</label>
                 <input type="number" name="year" value="<?= date("Y")?>" min="1500" max="3000">
 

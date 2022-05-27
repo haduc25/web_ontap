@@ -12,7 +12,8 @@
     public static function getAll()
     {
         $model = new static();
-        $sql = "select * from `$model->tName`, `$model->tName2` where $model->tName.ma_nhasx = $model->tName2.ma_nhasx";
+        // $sql = "select * from `$model->tName`, `$model->tName2` where $model->tName.ma_nhasx = $model->tName2.ma_nhasx";
+        $sql = "select * from `$model->tName`, `$model->tName2` where soluong > 5";
         $stmt = $model->conn->prepare($sql);
         $stmt->execute();
         $rs = $stmt ->fetchAll(PDO::FETCH_CLASS, get_class($model));
